@@ -9,6 +9,9 @@ This template should help get you started developing with Tauri and React in Vit
 
 - 练手项目。如果有大佬指点就更好了
 
+![viewDark](public/viewDark.png)
+
+![view](public/view.png)
 
 
 
