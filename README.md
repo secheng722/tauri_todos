@@ -7,7 +7,7 @@ This template should help get you started developing with Tauri and React in Vit
 - 前端。web  from https://www.youtube.com/watch?v=drF8HbnW87w
 
 
-练手项目。如果有大佬指点就更好了
+- 练手项目。如果有大佬指点就更好了
 
 
 
