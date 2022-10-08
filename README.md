@@ -2,7 +2,7 @@
 
 This template should help get you started developing with Tauri and React in Vite.
 
-# Tauri+React+Mysql
+# Rust+Tauri+React+Mysql
 
 - 前端。web  from https://www.youtube.com/watch?v=drF8HbnW87w
 
