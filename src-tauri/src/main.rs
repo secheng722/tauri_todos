@@ -10,7 +10,7 @@ use serde::{Deserialize, Serialize};
 use tauri::{async_runtime::Mutex, State};
 
 #[derive(Debug, Deserialize, Serialize)]
-struct todo {
+struct Todo {
     id: i32,
     text: String,
     complete: i32,
@@ -32,11 +32,11 @@ pub struct DBConnection(pub Mutex<InnerDBConnection>);
 #[tauri::command]
 async fn get_all_task(state: State<'_, DBConnection>) -> Result<String, String> {
     let mut db = state.0.lock().await;
-    let map: Result<Vec<todo>, mysql::error::Error> = db.conn.exec_map(
+    let map: Result<Vec<Todo>, mysql::error::Error> = db.conn.exec_map(
         "SELECT id,text,complete FROM task
 ",
         (),
-        |(id, text, complete)| todo { id, text, complete },
+        |(id, text, complete)| Todo { id, text, complete },
     );
     match map {
         Ok(res) => Ok(serde_json::to_string(&res).unwrap()),
